@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#092d38">
+<title>Weatherline | City weather</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header><div class="wrap brand">Weatherline</div></header>
+<main class="wrap">
+  <h1>City weather</h1>
+  <form id="search" novalidate>
+    <label for="city">Search by city</label>
+    <div class="search-row"><input id="city" type="search" placeholder="Try Pune or London" maxlength="100" required aria-describedby="status"><button type="submit">Search</button></div>
+  </form>
+  <p id="status" role="status">Search for a city to see its forecast.</p>
+  <section id="results" hidden aria-label="Weather results">
+    <article id="current" class="current" aria-label="Current conditions"></article>
+    <section class="outlook" aria-labelledby="forecast-title">
+      <h2 id="forecast-title">Five-day forecast</h2>
+      <ul id="forecast" class="forecast"></ul>
+    </section>
+  </section>
+  <noscript>Enable JavaScript to search for weather.</noscript>
+</main>
+<footer class="wrap">Weather data by <a href="https://open-meteo.com/">Open-Meteo</a>.</footer>
+</body></html>
