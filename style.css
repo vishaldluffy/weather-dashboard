@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font: 16px/1.5 system-ui,sans-serif; color: #15343e; background: #eaf3f3; }
+body { margin: 0; }
+.wrap { width: min(calc(100% - 2rem), 64rem); margin-inline: auto; }
+header { background: #092d38; color: #f3fffd; }
+.brand { font-size: 1.15rem; font-weight: 750; padding-block: .9rem; }
+main { padding: clamp(1.8rem,5vw,3.4rem) 0 1rem; }
+h1 { font: 500 clamp(2.8rem,8vw,5rem)/1 Georgia,serif; letter-spacing: -.055em; margin: 0 0 1.5rem; }
+h2,p { margin: 0; }
+form { max-width: 38rem; }
+label { display: block; font-weight: 700; margin-bottom: .35rem; }
+.search-row { display: flex; gap: .6rem; }
+input,button { border: 1px solid #547781; font: inherit; border-radius: .6rem; padding: .75rem .85rem; }
+input { flex: 1; min-width: 0; background: #fff; color: #15343e; }
+button { color: #fff; background: #075365; border-color: #075365; font-weight: 750; cursor: pointer; }
+button:hover:not(:disabled) { background: #093d4a; }
+button:disabled { opacity: .65; cursor: wait; }
+:focus-visible { outline: 3px solid #a4410b; outline-offset: 3px; }
+#status { min-height: 1.5em; margin: .8rem 0 1.2rem; color: #3b5c67; }
+#status.error { color: #963710; }
+.current { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: linear-gradient(120deg,#092d38,#075365); color: #fff; border-radius: 1rem; padding: clamp(1.2rem,4vw,2.2rem); }
+.current h2 { font: 500 clamp(1.65rem,5vw,2.6rem)/1.15 Georgia,serif; overflow-wrap: anywhere; }
+.loc { color: #c7e9e8; margin-top: .3rem; }
+.temp { font-size: clamp(3rem,8vw,5.5rem); letter-spacing: -.07em; line-height: 1.1; margin-top: .65rem; }
+.condition { color: #daefee; }
+.current img { width: clamp(3.4rem,15vw,7.2rem); flex: none; }
+.outlook { margin-top: 1.6rem; }
+.outlook h2 { font-size: 1.2rem; }
+.forecast { padding: 0; margin: .7rem 0 0; list-style: none; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: .65rem; }
+.forecast li { padding: .85rem; background: #fff; border: 1px solid #c9dadd; border-radius: .72rem; }
+.forecast img { display: block; width: 2.1rem; margin: .4rem 0; }
+.forecast p { color: #3b5c67; font-size: .87rem; }
+.forecast .range { margin-top: .3rem; color: #15343e; font-weight: 700; }
+footer { padding-bottom: 1.4rem; color: #3b5c67; font-size: .85rem; }
+a { color: #075365; }
+@media (max-width: 700px) { .forecast { grid-template-columns: repeat(2,minmax(0,1fr)); } }
